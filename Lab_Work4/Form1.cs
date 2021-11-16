@@ -28,7 +28,7 @@ namespace Diagramm
                 dataGridView1.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
                 dataGridView1.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
                 dataGridView1.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                
+
                 dataGridView1.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
                 dataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -108,10 +108,10 @@ namespace Diagramm
                     chart1.Series["S1"].Label = "#PERCENT{P}";
 
 
-                    chart1.Series["S1"].LegendText = "Стоимость" ;
-                    chart1.Series["S1"].Points.AddXY(priceForOne + " " + name,priceForOne);
+                    chart1.Series["S1"].LegendText = "Стоимость";
+                    chart1.Series["S1"].Points.AddXY(priceForOne + " " + name, priceForOne);
                 }
-                if(double.TryParse(dataGridView1.Rows[i].Cells[1].Value.ToString(), out l) == false || double.TryParse(dataGridView1.Rows[i].Cells[2].Value.ToString(), out l) == false)
+                if (double.TryParse(dataGridView1.Rows[i].Cells[1].Value.ToString(), out l) == false || double.TryParse(dataGridView1.Rows[i].Cells[2].Value.ToString(), out l) == false)
                 {
                     ShowMessageBox("Введены некорректные данные", "Сообщение");
                 }
@@ -127,7 +127,7 @@ namespace Diagramm
                 chart1.Series.Add("S1");
                 deal();
                 chart1.Series["S1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-              
+
             }
             else if (chart1.Series["S1"].ChartType == System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column)
             {
@@ -135,7 +135,7 @@ namespace Diagramm
                 chart1.Series.Add("S1");
                 deal();
                 chart1.Series["S1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-                
+
             }
         }
 
@@ -149,7 +149,7 @@ namespace Diagramm
                 chart1.Series["S1"].LegendText = "#VALX";
                 deal();
                 chart1.Series["S1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-             
+
             }
             else if (chart1.Series["S1"].ChartType == System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column)
             {
@@ -157,7 +157,7 @@ namespace Diagramm
                 chart1.Series.Add("S1");
                 deal();
                 chart1.Series["S1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-                
+
             }
         }
 
